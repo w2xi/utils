@@ -1,0 +1,1 @@
+export const validateMobilePhone = (val: string) => /^1[3456789]\d{9}$/.test(val)

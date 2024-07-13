@@ -1,0 +1,42 @@
+{
+  "name": "@w2xi/utils",
+  "version": "0.0.1",
+  "description": "Opinionated collection of common utils",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/w2xi/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w2xi/utils.git"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "nr build",
+    "dev": "pnpm run build --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "test": "vitest"
+  },
+  "keywords": ["utils"],
+  "files": ["dist"],
+  "author": "w2xi",
+  "license": "MIT",
+  "devDependencies": {
+    "bumpp": "^9.4.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "vitest": "^2.0.2"
+  }
+}
