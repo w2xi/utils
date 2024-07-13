@@ -24,10 +24,11 @@
   },
   "scripts": {
     "prepublishOnly": "nr build",
-    "dev": "pnpm run build --watch",
+    "dev": "nr build --watch",
     "build": "tsup src/index.ts --dts --format cjs,esm",
     "release": "bumpp --commit --push --tag && pnpm publish",
-    "test": "vitest"
+    "test": "vitest",
+    "type": "tsc --noEmit"
   },
   "keywords": ["utils"],
   "files": ["dist"],
