@@ -1,4 +1,7 @@
-# utils
+# @w2xi/utils
 
-> Opinionated collection of common utils
+Opinionated collection of common utils
 
+# License
+
+[MIT](./LICENSE)
